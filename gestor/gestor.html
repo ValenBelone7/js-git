@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Películas</title>
+</head>
+
+<body>
+    <h1>Gestor de Películas</h1>
+
+    <input id="nuevaPelicula" type="text" placeholder="Ingrese el nombre de la película">
+    <button onclick="agregarPelicula()">Agregar</button>
+    <br><br>
+
+    <button onclick="mostrarPeliculas()">Mostrar películas</button>
+    <button onclick="verNumeradas()">Ver numeradas</button>
+    <button onclick="ordenarPeliculas()">Ordenar alfabéticamente</button>
+    <br><br>
+
+    <input id="indiceEliminar" type="number" placeholder="Número de película a eliminar">
+    <button onclick="eliminarPelicula()">Eliminar</button>
+    <br><br>
+
+    <input id="indiceEditar" type="number" placeholder="Número de película a editar">
+    <input id="nuevoNombre" type="text" placeholder="Nuevo nombre">
+    <button onclick="editarPelicula()">Editar</button>
+    <br><br>
+
+    <ul id="listaPeliculas"></ul>
+    <p id="contadorPeliculas"></p>
+
+    <script src="/gestor/peliculas.js"></script>
+</body>
+
+</html>
+
