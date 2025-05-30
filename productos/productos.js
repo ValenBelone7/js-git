@@ -1,4 +1,4 @@
-let productos = []
+let productos = JSON.parse(localStorage.getItem(`productos`)) || []
 
 const agregarProducto = () => {
     const nombre = document.getElementById("nombre").value.trim()
@@ -17,6 +17,9 @@ const agregarProducto = () => {
     }
 
     productos.push(nuevoProducto)
+
+    localStorage.setItem(`productos`, JSON.stringify(productos))
+
     limpiarFormulario()
     mostrarProductos()
 }
@@ -70,3 +73,7 @@ const limpiarFormulario = () => {
     document.getElementById("categoria").value = ""
     document.getElementById("precio").value = ""
 }
+
+document.addEventListener(`DOMContentLoaded`, () => {
+    mostrarProductos()
+})
